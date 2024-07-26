@@ -1,0 +1,25 @@
+name: Translate
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "docs/**/*.md"
+      - "docs/**/*.mdx"
+
+jobs:
+  ja:
+    runs-on: ubuntu-latest
+    # Do not run translation on PRs from forks since they don't have access to the SIMPLEEN secret
+    if: ${{ !github.event.pull_request.head.repo.fork }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "20"
