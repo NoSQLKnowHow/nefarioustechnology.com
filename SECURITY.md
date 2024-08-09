@@ -1,6 +1,6 @@
-# Security Policy
+# Security policy
 
-## Supported Versions
+## Supported versions
 
 Use this section to tell people about which versions of your project are
 currently being supported with security updates.
@@ -9,6 +9,6 @@ currently being supported with security updates.
 | ------- | ------------------ |
 | 1.x   | :white_check_mark: |
 
-## Reporting a Vulnerability
+## Reporting a vulnerability to me
 
 If you find a vulnerability, please contact me via GitHub.
